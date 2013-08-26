@@ -7,6 +7,20 @@ defect capturing tools which assists developers on code quality improvement by e
 practices. IDLE Analyzer project is aimed to integrate these tools into IDLE editor as extensions of graphical tools 
 which can be used on-the-fly.  
 
+Features 
+========
+
+1. Style defect dapturing using pep8 tool
+  On-the-fly syntax checking and highlighting of PEP8 python style conventions.
+
+ (TODOs)
+2. Metrics details using Pymetrix.
+   Reporting of code meassures including McCabe's Cyclomatic Complexity metric, LoC and %Comments.
+
+3. Passive checking of code using PyFlakes. 
+  On-the-fly syntax highlighting and error checking.
+
+
 Installation
 ============
 
