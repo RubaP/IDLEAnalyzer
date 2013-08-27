@@ -29,7 +29,7 @@ Installation
 - Append config-extensions .cfg to ~/.idlerc/config-extensions.cfg
       (If it doesn't exist yet copy the file over)
     
-- Copy extensions/PEP8Check.py and analyzers/pep8.py into idlelib/extensions
+- Copy StyleCheck.py and DocTest.py into idlelib/extensions
       which is found in the Python directory
       (On my Ubuntu this is /usr/lib/python2.7/idlelib)
       This requires root access (sudo), So I did followings,

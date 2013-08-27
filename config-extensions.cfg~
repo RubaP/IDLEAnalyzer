@@ -1,5 +1,4 @@
 # IDLEAnalyzer Extensions START
-
 [PEP8Check]
 enable=1
 enable_shell=0
