@@ -29,7 +29,7 @@ Installation
     
 - Copy extensions/PEP8Check.py and analyzers/pep8.py into <YourPythonDirectory>/idlelib
       This requires root access (sudo), So I did followings,
-        ```sudo so```
+        ```sudo su```
         ```cp -r extensions/PEP8Check.py /usr/lib/python2.7/idlelib```
         ```cp -r analyzers/pep8.py /usr/lib/python2.7/idlelib```
 
