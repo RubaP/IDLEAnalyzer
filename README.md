@@ -24,10 +24,8 @@ Features
 Installation
 ============
 
-- Install pep8 (In unix this is sudo apt-get install pep8 )
-
-- Append config-extensions .cfg to ~/.idlerc/config-extensions.cfg
-      (If it doesn't exist yet copy the file over)
+- Append all contents of config-extensions.cfg to <YourPythonDirectory>/idlelib/config-extensions.cfg
+        (On my ubuntu it is /usr/lib/python2.7/idlelib/config-extensions.cfg)
     
 - Copy extensions/PEP8Check.py and analyzers/pep8.py into idlelib/extensions
       which is found in the Python directory
@@ -43,7 +41,7 @@ Usage
     * After this installation IDLE will show PEP8 style check toggle menu in Options.
     * Once PEP8 check enabled the current module is checked by pep8 tool and the defects will be shown in a extended left pane. 
     *Defect codes will be listed as a Buttons, button click leads to highlighting the line and column of the defect and scroll editor window if needed. 
-    *It is expected that the developer will correct the defect with the help of the message and eventually press the Resolve button,which refresh the pane.
+    *It is expected that the developer will correct the defect with the help of the message and eventually press the Resolved button,which refresh the pane.
 
 2. Metrics details.
     TODO
