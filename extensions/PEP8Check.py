@@ -15,12 +15,19 @@ try:
     from Tkinter import *
 except ImportError:
     # for Python3
-    from tkinter import *                               
+    from tkinter import *   
+
+try:
+    # for Python2
+    from StringIO import StringIO
+except:
+    # for Python3
+    from io import StringIO
+                            
 import re
 from sys import maxsize as INFINITY
 from idlelib.configHandler import idleConf
 import pep8
-from StringIO import StringIO
 import sys
 
 
