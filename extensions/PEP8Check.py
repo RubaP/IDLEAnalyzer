@@ -4,9 +4,18 @@ It is nice to have a reminder that the Python code style conforms to PEP 8
 the official Python style guide.  Need to add a better comment up here.
 
 """
-import tkinter
-from tkinter.constants import (TOP, LEFT, RIGHT, X, Y, W, E, N, S, NW, SUNKEN,
-                               RAISED, BOTTOM, RIDGE, HORIZONTAL, END, NE)
+
+#problem with tkinter version
+#import tkinter
+#from tkinter.constants import (TOP, LEFT, RIGHT, X, Y, W, E, N, S, NW, SUNKEN,
+#                               RAISED, BOTTOM, RIDGE, HORIZONTAL, END, NE)
+
+try:
+    # for Python2
+    from Tkinter import *
+except ImportError:
+    # for Python3
+    from tkinter import *                               
 import re
 from sys import maxsize as INFINITY
 from idlelib.configHandler import idleConf
@@ -75,7 +84,7 @@ class PEP8Check:  # this is the IDLE extension code
             for widget in widgets:
                 border += int(str(widget.cget('border')))
 
-            self.topLabel = tkinter.Label(self.editwin.top,
+            self.topLabel = Label(self.editwin.top,
                                        text="PEP8 Style Check Mode",
                                        anchor=W, justify=LEFT,
                                        font=self.textfont,
@@ -84,7 +93,7 @@ class PEP8Check:  # this is the IDLE extension code
                                        padx=padx, border=border,
                                        relief=SUNKEN)
 
-            self.verticalLabelFrame = tkinter.LabelFrame(self.editwin.top,
+            self.verticalLabelFrame = LabelFrame(self.editwin.top,
                                                          text=
                                                          "PEP8 Style Check",
                                                          bg=self.bgcolor,
@@ -92,10 +101,10 @@ class PEP8Check:  # this is the IDLE extension code
                                                          width=pady,
                                                          border=border,
                                                          relief=SUNKEN)
-            self.configButton = tkinter.Button(self.topLabel,
+            self.configButton = Button(self.topLabel,
                                           text="Configure PEP8",
                                           command=self.update)
-            self.closePep8Button = tkinter.Button(self.topLabel,
+            self.closePep8Button = Button(self.topLabel,
                                           text="Exit PEP8 mode",
                                               command = self.toggle_pep8check_event)
             
@@ -108,9 +117,9 @@ class PEP8Check:  # this is the IDLE extension code
             self.verticalLabelFrame.pack(side=RIGHT, fill=Y, expand=True)
             self.closePep8Button.pack(side=RIGHT)
             self.configButton.pack(side=RIGHT)  
-            #self.editwin.top = tkinter.Tk()
-            #var = tkinter.IntVar()
-            #self.c = tkinter.Checkbutton(self.topLabel, text="Expand", variable=var, onvalue = 1, offvalue = 0)
+            #self.editwin.top = Tk()
+            #var = IntVar()
+            #self.c = Checkbutton(self.topLabel, text="Expand", variable=var, onvalue = 1, offvalue = 0)
 
             #self.c.pack(after=self.editwin.top)
  
@@ -161,17 +170,17 @@ class PEP8Check:  # this is the IDLE extension code
                     error = False
                     codecolor = "#FFBF00"
 
-                messageLabelFrame = tkinter.LabelFrame(self.verticalLabelFrame)
-                codeButton = tkinter.Button(messageLabelFrame, text=code,
+                messageLabelFrame = LabelFrame(self.verticalLabelFrame)
+                codeButton = Button(messageLabelFrame, text=code,
                                             bg=codecolor,
                                             width=5,
                                             command=lambda j=lineno,
                                             k=colno, l=i:
                                             self.highlight(j, k, l))
-                lineColLabel = tkinter.Label(messageLabelFrame,
+                lineColLabel = Label(messageLabelFrame,
                                              text=lineno+":"+colno)
-                messageLabel = tkinter.Label(messageLabelFrame, text=message)
-                resolveButton = tkinter.Button(messageLabelFrame,
+                messageLabel = Label(messageLabelFrame, text=message)
+                resolveButton = Button(messageLabelFrame,
                                                text="Resolved",
                                                bg="#03CF47",
                                                command=self.update)
