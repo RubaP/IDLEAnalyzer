@@ -47,3 +47,12 @@ Usage
 3. PyFlakes Check
     TODO
 
+
+On Python Issue Tracker
+-----------------------
+This is a project initiated as "IDLE: PEP8 Style Check Integration" in python issue tracker at http://bugs.python.org/issue18704 
+The initial work is submmited as a CPython patch and the idea is getting more generalized with core Python developers suggestions on that issue.
+This developement extends the works done with the patch, named as IDLE Analyzer to enable the usefull features to Python developers.
+
+
+
