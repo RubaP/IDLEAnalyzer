@@ -25,15 +25,13 @@ Installation
 ------------
 
 - Append all contents of config-extensions.cfg to <YourPythonDirectory>/idlelib/config-extensions.cfg
-        (On my ubuntu it is /usr/lib/python2.7/idlelib/config-extensions.cfg)
+     (On my ubuntu <YourPythonDirectory> means /usr/lib/python2.7)
     
-- Copy extensions/PEP8Check.py and analyzers/pep8.py into idlelib/extensions
-      which is found in the Python directory
-      (On my Ubuntu this is /usr/lib/python2.7/idlelib)
+- Copy extensions/PEP8Check.py and analyzers/pep8.py into <YourPythonDirectory>/idlelib
       This requires root access (sudo), So I did followings,
         ```sudo so```
-        ```mkdir -p /usr/lib/python2.7/idlelib/extensions/ && cp -r extensions/PEP8Check.py /usr/lib/python2.7/idlelib/extensions/```
-        ```mkdir -p /usr/lib/python2.7/idlelib/extensions/ && cp -r analyzers/pep8.py /usr/lib/python2.7/idlelib/extensions/```
+        ```cp -r extensions/PEP8Check.py /usr/lib/python2.7/idlelib```
+        ```cp -r analyzers/pep8.py /usr/lib/python2.7/idlelib```
 
 Usage
 -----
