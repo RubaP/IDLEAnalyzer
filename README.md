@@ -8,7 +8,7 @@ practices. IDLE Analyzer project is aimed to integrate these tools into IDLE edi
 which can be used on-the-fly.  
 
 Features 
-========
+--------
 
 1. Style defect dapturing using pep8 tool
   On-the-fly syntax checking and highlighting of PEP8 python style conventions.
@@ -22,7 +22,7 @@ Features
 
 
 Installation
-============
+------------
 
 - Append all contents of config-extensions.cfg to <YourPythonDirectory>/idlelib/config-extensions.cfg
         (On my ubuntu it is /usr/lib/python2.7/idlelib/config-extensions.cfg)
@@ -31,12 +31,12 @@ Installation
       which is found in the Python directory
       (On my Ubuntu this is /usr/lib/python2.7/idlelib)
       This requires root access (sudo), So I did followings,
-        sudo so
-        mkdir -p /usr/lib/python2.7/idlelib/extensions/ && cp -r extensions/PEP8Check.py /usr/lib/python2.7/idlelib/extensions/
-        mkdir -p /usr/lib/python2.7/idlelib/extensions/ && cp -r analyzers/pep8.py /usr/lib/python2.7/idlelib/extensions/
+        ```sudo so```
+        ```mkdir -p /usr/lib/python2.7/idlelib/extensions/ && cp -r extensions/PEP8Check.py /usr/lib/python2.7/idlelib/extensions/```
+        ```mkdir -p /usr/lib/python2.7/idlelib/extensions/ && cp -r analyzers/pep8.py /usr/lib/python2.7/idlelib/extensions/```
 
 Usage
-=====
+-----
 1. Style Defects with Pep8.
     * After this installation IDLE will show PEP8 style check toggle menu in Options.
     * Once PEP8 check enabled the current module is checked by pep8 tool and the defects will be shown in a extended left pane. 
