@@ -20,7 +20,7 @@ import re
 from sys import maxsize as INFINITY
 from idlelib.configHandler import idleConf
 import pep8
-import io
+from StringIO import StringIO
 import sys
 
 
@@ -244,7 +244,7 @@ class PEP8Check:  # this is the IDLE extension code
         # prints results to standard output.  This is a much better hack then
         # modifying pep8
         old_stdout = sys.stdout
-        captured_stdout = io.StringIO()
+        captured_stdout = StringIO()
         sys.stdout = captured_stdout
         lastLine = int(self.text.index('end-1c').split('.')[0])
         codeLines = []
