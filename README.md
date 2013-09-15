@@ -7,8 +7,8 @@ defect capturing tools which assists developers on code quality improvement by e
 practices. IDLE Analyzer project is aimed to integrate these tools into IDLE editor as extensions of graphical tools 
 which can be used on-the-fly.  
 
-Features 
---------
+#### Features 
+
 
 1. Style defect dapturing using pep8 tool
   On-the-fly syntax checking and highlighting of PEP8 python style conventions.
@@ -21,8 +21,8 @@ Features
   On-the-fly syntax highlighting and error checking.
 
 
-Installation
-------------
+#### Installation
+
 
 - Append all contents of config-extensions.cfg to <YourPythonDirectory>/idlelib/config-extensions.cfg
      (On my ubuntu <YourPythonDirectory> means /usr/lib/python2.7)
@@ -33,8 +33,8 @@ Installation
         ```cp -r extensions/PEP8Check.py /usr/lib/python2.7/idlelib```
         ```cp -r analyzers/pep8.py /usr/lib/python2.7/idlelib```
 
-Usage
------
+#### Usage
+
 1. Style Defects with Pep8.
     * After this installation IDLE will show PEP8 style check toggle menu in Options.
     * Once PEP8 check enabled the current module is checked by pep8 tool and the defects will be shown in a extended left pane. 
@@ -48,8 +48,8 @@ Usage
     TODO
 
 
-On Python Issue Tracker
------------------------
+#### On Python Issue Tracker
+
 This is a project initiated as "IDLE: PEP8 Style Check Integration" in python issue tracker at http://bugs.python.org/issue18704 
 The initial work is submmited as a CPython patch and the idea is getting more generalized with core Python developers suggestions on that issue.
 This developement extends the works done with the patch, named as IDLE Analyzer to enable the usefull features to Python developers.
