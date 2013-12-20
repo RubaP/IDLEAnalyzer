@@ -11,6 +11,7 @@ class CarClass:
         self.make = make
         self.model = model
         self.year = year
+		print "Git test by pruba"
         print "ok"
  
         if "Windows" in platform.platform():
