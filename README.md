@@ -45,7 +45,7 @@ which can be used on-the-fly.
     TODO
 
 3. PyFlakes Check
-    TODO
+    TODO //
 
 
 #### On Python Issue Tracker
